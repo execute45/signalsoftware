@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vercel theme — 21st.dev/community/themes/vercel */
+:root {
+  --background: 0.99 0 0;
+  --foreground: 0 0 0;
+  --card: 1 0 0;
+  --card-foreground: 0 0 0;
+  --popover: 0.99 0 0;
+  --popover-foreground: 0 0 0;
+  --primary: 0 0 0;
+  --primary-foreground: 0.99 0 0;
+  --secondary: 0.94 0 0;
+  --secondary-foreground: 0 0 0;
+  --muted: 0.97 0 0;
+  --muted-foreground: 0.44 0 0;
+  --accent: 0.94 0 0;
+  --accent-foreground: 0 0 0;
+  --destructive: 0.63 0.19 23.03;
+  --destructive-foreground: 0.99 0 0;
+  --border: 0.92 0 0;
+  --input: 0.94 0 0;
+  --ring: 0 0 0;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0 0;
+  --foreground: 0.99 0 0;
+  --card: 0.14 0 0;
+  --card-foreground: 0.99 0 0;
+  --popover: 0.18 0 0;
+  --popover-foreground: 0.99 0 0;
+  --primary: 1 0 0;
+  --primary-foreground: 0 0 0;
+  --secondary: 0.25 0 0;
+  --secondary-foreground: 0.99 0 0;
+  --muted: 0.23 0 0;
+  --muted-foreground: 0.72 0 0;
+  --accent: 0.32 0 0;
+  --accent-foreground: 0.99 0 0;
+  --destructive: 0.69 0.2 23.91;
+  --destructive-foreground: 0.99 0 0;
+  --border: 0.26 0 0;
+  --input: 0.32 0 0;
+  --ring: 0.72 0 0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    font-family: 'Geist', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: oklch(var(--primary) / 0.2);
+    color: oklch(var(--foreground));
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .glass-nav {
+    border-bottom: 1px solid oklch(var(--border) / 0.5);
+    background-color: oklch(var(--background) / 0.7);
+    backdrop-filter: blur(24px);
+  }
+
+  .gradient-text {
+    color: oklch(var(--foreground));
+  }
+
+  .card-surface {
+    border-radius: 1rem;
+    border: 1px solid oklch(var(--border));
+    background-color: oklch(var(--card));
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  .card-surface:hover {
+    border-color: oklch(var(--ring) / 0.3);
+    background-color: oklch(var(--accent) / 0.5);
+  }
+
+  .input-field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid oklch(var(--input));
+    background-color: oklch(var(--background));
+    padding: 0.75rem 1rem;
+    color: oklch(var(--foreground));
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .input-field::placeholder {
+    color: oklch(var(--muted-foreground));
+  }
+
+  .input-field:focus {
+    border-color: oklch(var(--ring) / 0.5);
+    outline: none;
+    box-shadow: 0 0 0 2px oklch(var(--ring) / 0.2);
+  }
+
+  .hero-section {
+    min-height: calc(100vh - 40px);
+    border-radius: 0 0 14px 14px;
+  }
+
+  /* Atmosphäre — dezenter als vorher, lässt Kreis-Bogen durch */
+  .hero-atmosphere {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 55%,
+      rgba(137, 142, 142, 0.35) 78%,
+      rgba(255, 255, 255, 0.15) 92%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, #333 1px, transparent 1px),
+      linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 10%, transparent 70%);
+  }
+
+  /* Planeten-Horizont: großer Kreis, größtenteils unterhalb, weißer Rand = Bogen */
+  .hero-horizon {
+    left: 50%;
+    top: calc(100% - 90px);
+    height: 500px;
+    width: 700px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    background-color: #000;
+    background-image: radial-gradient(closest-side, #000 82%, #fff 100%);
+    box-shadow:
+      0 -2px 8px rgba(255, 255, 255, 0.6),
+      0 -30px 80px rgba(255, 255, 255, 0.12);
+  }
+
+  @media (min-width: 768px) {
+    .hero-horizon {
+      width: 1100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-horizon {
+      top: calc(100% - 150px);
+      height: 750px;
+      width: 140%;
+    }
+  }
+
+  .hero-badge {
+    display: block;
+    text-decoration: none;
+  }
+
+  .hero-badge-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 8px 20px;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(to top right, rgba(212, 212, 216, 0.05), rgba(156, 163, 175, 0.05), transparent);
+    color: oklch(0.707 0.022 261.325);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    background: linear-gradient(to right bottom, #fff 30%, rgba(255, 255, 255, 0.4) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-subtitle {
+    color: oklch(0.707 0.022 261.325);
+  }
+
+  .hero-cta {
+    position: relative;
+    z-index: 20;
+    background-color: oklch(0.922 0 0);
+    color: oklch(0.205 0 0);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .hero-cta:hover {
+    background-color: oklch(0.922 0 0 / 0.9);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+
+  .animate-fade-in-up-delay {
+    animation: fadeInUp 0.7s ease-out 0.15s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 0.7s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
