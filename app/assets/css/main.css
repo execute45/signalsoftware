@@ -50,7 +50,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 
   body {
@@ -120,8 +120,7 @@
   }
 
   .hero-section {
-    min-height: calc(100vh - 40px);
-    border-radius: 0 0 14px 14px;
+    border-radius: 0;
   }
 
   /* Atmosphäre — dezenter als vorher, lässt Kreis-Bogen durch */
@@ -169,7 +168,7 @@
     .hero-horizon {
       top: calc(100% - 150px);
       height: 750px;
-      width: 140%;
+      width: min(1400px, 92vw);
     }
   }
 
@@ -221,6 +220,104 @@
 
   .hero-cta:hover {
     background-color: oklch(0.922 0 0 / 0.9);
+  }
+
+  /* Process FX — dark background like hero */
+  .fx-space {
+    background: #000;
+  }
+
+  .fx-space-atmosphere {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 55%,
+      rgba(137, 142, 142, 0.35) 78%,
+      rgba(255, 255, 255, 0.15) 92%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+  }
+
+  .fx-space-grid {
+    background-image:
+      linear-gradient(to right, #333 1px, transparent 1px),
+      linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 10%, transparent 70%);
+  }
+
+  /* Rising Earth behind horizon */
+  .fx-world-wrap {
+    left: 50%;
+    bottom: -2%;
+    z-index: 0;
+    transform: translateX(-50%);
+  }
+
+  /* Horizon arc — white rim like hero (no cyan) */
+  .fx-horizon-front {
+    z-index: 2;
+    opacity: 1 !important;
+    isolation: isolate;
+    background-color: #000;
+    background-image: radial-gradient(closest-side, #000 82%, #fff 100%);
+    box-shadow:
+      0 -2px 8px rgba(255, 255, 255, 0.6),
+      0 -30px 80px rgba(255, 255, 255, 0.12);
+  }
+
+  .fx-space .hero-horizon {
+    top: calc(100% - 72px);
+    height: 440px;
+    width: min(920px, 135vw);
+  }
+
+  .fx-world {
+    position: relative;
+    z-index: 0;
+    width: min(78vw, 340px);
+    height: min(78vw, 340px);
+  }
+
+  .fx-globe-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+
+  @media (min-width: 768px) {
+    .fx-world-wrap {
+      bottom: -8%;
+    }
+
+    .fx-space .hero-horizon {
+      top: calc(100% - 90px);
+      height: 500px;
+      width: 1100px;
+    }
+
+    .fx-world {
+      width: min(58vw, 520px);
+      height: min(58vw, 520px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .fx-world-wrap {
+      bottom: -4%;
+    }
+
+    .fx-space .hero-horizon {
+      top: calc(100% - 150px);
+      height: 750px;
+      width: min(1400px, 92vw);
+    }
+
+    .fx-world {
+      width: min(42vw, 560px);
+      height: min(42vw, 560px);
+    }
   }
 }
 

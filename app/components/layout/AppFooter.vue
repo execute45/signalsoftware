@@ -8,18 +8,17 @@ const { scrollToSection } = useScrollTo()
     <div class="container-site section-padding pb-10 pt-16">
       <div class="grid gap-10 md:grid-cols-3">
         <div>
-          <div class="mb-4 flex items-center gap-2">
-            <span
-              class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground"
+          <div class="mb-4">
+            <img
+              src="/logo.png"
+              alt="Signal Software"
+              class="h-8 w-auto"
+              width="480"
+              height="128"
             >
-              S
-            </span>
-            <span class="text-lg font-semibold text-foreground">
-              Signal <span class="text-muted-foreground">Software</span>
-            </span>
           </div>
           <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Softwareentwicklung und Landingpages auf höchstem Niveau — spezialisiert auf Nuxt.js für den deutschen Markt.
+            Softwareentwicklung und Landingpages auf höchstem Niveau, spezialisiert auf Nuxt.js für den deutschen Markt.
           </p>
         </div>
 
@@ -51,6 +50,14 @@ const { scrollToSection } = useScrollTo()
               >
                 Kontakt
               </button>
+            </li>
+            <li>
+              <NuxtLink
+                to="/blog"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Blog
+              </NuxtLink>
             </li>
           </ul>
         </div>

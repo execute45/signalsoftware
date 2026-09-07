@@ -5,24 +5,20 @@ const { scrollToSection } = useScrollTo()
 <template>
   <section
     id="hero"
-    class="hero-section relative isolate mx-auto w-full overflow-hidden bg-black px-6 pt-40 text-center md:px-8"
+    class="hero-section relative isolate mx-auto flex min-h-[100svh] w-full flex-col justify-center overflow-hidden bg-black px-6 pt-28 pb-16 text-center md:px-8 md:pt-32"
   >
-    <!-- Atmosphären-Gradient (separater Layer) -->
     <div class="hero-atmosphere pointer-events-none absolute inset-0 z-0" aria-hidden="true" />
 
-    <!-- Grid — nur obere 600px -->
     <div
       class="hero-grid pointer-events-none absolute inset-x-0 top-0 z-0 h-[600px] w-full opacity-80"
       aria-hidden="true"
     />
 
-    <!-- Horizont-Bogen / Planeten-Kreis -->
     <div
       class="hero-horizon pointer-events-none absolute z-[1]"
       aria-hidden="true"
     />
 
-    <!-- Content -->
     <div class="relative z-10">
       <a
         href="#leistungen"
@@ -41,8 +37,8 @@ const { scrollToSection } = useScrollTo()
         Software &amp; Landingpages<br>auf höchstem Niveau
       </h1>
 
-      <p class="hero-subtitle -translate-y-4 text-balance mb-12 text-lg tracking-tight md:text-xl">
-        Signal Software entwickelt performante Webanwendungen und conversion-starke Landingpages —
+      <p class="hero-subtitle mx-auto mb-12 max-w-3xl -translate-y-4 text-balance text-lg tracking-tight md:text-xl">
+        Signal Software entwickelt performante Webanwendungen und conversion-starke Landingpages,
         schnell, skalierbar und SEO-optimiert für den deutschen Markt.
       </p>
 

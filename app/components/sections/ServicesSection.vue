@@ -4,7 +4,7 @@ const services = [
     icon: 'code',
     title: 'Individuelle Softwareentwicklung',
     description:
-      'Maßgeschneiderte Webanwendungen und digitale Produkte — von der Idee bis zur produktionsreifen Lösung, architekturiert für Wachstum.',
+      'Maßgeschneiderte Webanwendungen und digitale Produkte, von der Idee bis zur produktionsreifen Lösung, architekturiert für Wachstum.',
   },
   {
     icon: 'layout',
@@ -27,7 +27,7 @@ const services = [
       <UiSectionHeading
         label="Leistungen"
         title="Was wir für Sie entwickeln"
-        description="Drei Kernbereiche, ein Anspruch: höchste Qualität in jedem Detail — von der ersten Zeile Code bis zum Launch."
+        description="Drei Kernbereiche, ein Anspruch: höchste Qualität in jedem Detail, von der ersten Zeile Code bis zum Launch."
         align="center"
       />
 

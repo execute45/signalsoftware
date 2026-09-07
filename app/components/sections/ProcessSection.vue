@@ -10,7 +10,7 @@ const steps = [
     number: '02',
     title: 'Konzept',
     description:
-      'Strategie, Wireframes und technische Planung — damit jeder Euro in die richtige Richtung fließt.',
+      'Strategie, Wireframes und technische Planung, damit jeder Euro in die richtige Richtung fließt.',
   },
   {
     number: '03',
@@ -33,7 +33,7 @@ const steps = [
       <UiSectionHeading
         label="Prozess"
         title="Von der Idee zum Launch"
-        description="Ein transparenter, bewährter Ablauf — damit Sie jederzeit wissen, wo Ihr Projekt steht."
+        description="Ein transparenter, bewährter Ablauf, damit Sie jederzeit wissen, wo Ihr Projekt steht."
         align="center"
       />
 

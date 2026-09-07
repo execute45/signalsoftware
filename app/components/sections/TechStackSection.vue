@@ -17,7 +17,7 @@ const technologies = [
       <UiSectionHeading
         label="Tech-Stack"
         title="Technologien, die überzeugen"
-        description="Wir setzen auf bewährte, moderne Tools — mit Nuxt.js als Herzstück jeder Lösung."
+        description="Wir setzen auf bewährte, moderne Tools, mit Nuxt.js als Herzstück jeder Lösung."
         align="center"
       />
 
@@ -33,7 +33,7 @@ const technologies = [
       </div>
 
       <p class="mx-auto mt-10 max-w-xl text-center text-sm text-muted-foreground">
-        Der Stack wächst mit Ihrem Projekt — immer passend, nie over-engineered.
+        Der Stack wächst mit Ihrem Projekt, immer passend, nie over-engineered.
       </p>
     </div>
   </section>

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const reasons = [
   {
-    title: 'Deutsche Qualität',
+    title: 'Höchste Qualität',
     description:
       'Verständliche Kommunikation, zuverlässige Umsetzung und ein tiefes Verständnis für den deutschen Markt und seine Anforderungen.',
   },
   {
     title: 'Moderne Architektur',
     description:
-      'Sauberer, wartbarer Code auf Basis aktueller Best Practices — TypeScript, komponentenbasiert und zukunftssicher.',
+      'Sauberer, wartbarer Code auf Basis aktueller Best Practices: TypeScript, komponentenbasiert und zukunftssicher.',
   },
   {
     title: 'Performance-first',
@@ -18,7 +18,7 @@ const reasons = [
   {
     title: 'Langfristige Partnerschaft',
     description:
-      'Wir denken über den Launch hinaus — mit skalierbarer Architektur, dokumentiertem Code und Support, wenn Sie ihn brauchen.',
+      'Wir denken über den Launch hinaus, mit skalierbarer Architektur, dokumentiertem Code und Support, wenn Sie ihn brauchen.',
   },
 ]
 </script>
@@ -31,7 +31,7 @@ const reasons = [
           <UiSectionHeading
             label="Warum Signal Software"
             title="Qualität, die man sieht und misst"
-            description="Wir kombinieren technische Exzellenz mit strategischem Denken — damit Ihre Software nicht nur funktioniert, sondern Ergebnisse liefert."
+            description="Wir kombinieren technische Exzellenz mit strategischem Denken, damit Ihre Software nicht nur funktioniert, sondern Ergebnisse liefert."
           />
 
           <div class="mt-8 space-y-6">
@@ -75,7 +75,7 @@ const reasons = [
   <span class="text-muted-foreground">market:</span> <span class="text-foreground">'Deutschland'</span>,
 }</code></pre>
             <p class="text-sm text-muted-foreground">
-              So sieht Exzellenz aus — sauberer Code, klare Struktur, messbare Ergebnisse.
+              So sieht Exzellenz aus: sauberer Code, klare Struktur, messbare Ergebnisse.
             </p>
           </div>
         </div>

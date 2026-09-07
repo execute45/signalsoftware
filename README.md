@@ -42,25 +42,26 @@ server/
 assets/css/main.css          # Design-Tokens & globale Styles (unter app/)
 ```
 
-## Kontaktformular
+## Kontaktformular & Admin
 
-Das Formular validiert client- und serverseitig. Anfragen werden aktuell serverseitig geloggt.
+Kontaktanfragen werden in SQLite (`.data/signal.db`) als Leads gespeichert.
 
-**Phase 2 — E-Mail-Versand:** Env-Variablen für SMTP oder Resend/SendGrid in `server/api/contact.post.ts` ergänzen.
+**Admin:** [http://localhost:3000/admin](http://localhost:3000/admin)  
+Login-Daten in `.env` (siehe `.env.example`):
+
+- `NUXT_ADMIN_EMAIL`
+- `NUXT_ADMIN_PASSWORD`
+- `NUXT_SESSION_PASSWORD` (min. 32 Zeichen)
+
+Im Admin kannst du Leads einsehen und Blog-Beiträge erstellen. Öffentlich: `/blog`.
+
+**Hinweis:** Für Admin + Leads brauchst du einen Node-Server (`npm run build` + `node .output/server/index.mjs`), kein reines Static Hosting.
 
 ## Deployment
 
-Statische Generierung für optimale Performance:
-
 ```bash
-npm run generate
+npm run build
+node .output/server/index.mjs
 ```
 
-Output liegt in `.output/public/` — deploybar auf Netlify, Vercel, Cloudflare Pages oder jedem Static Host.
-
-## Nächste Schritte
-
-- Impressum & Datenschutz-Seiten
-- Portfolio / Referenzen
-- Blog via `@nuxt/content`
-- E-Mail-Versand für Kontaktformular konfigurieren
+Für rein statische Landingpage ohne Admin: `npm run generate`.

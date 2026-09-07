@@ -1,16 +1,16 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Signal Software — Software & Landingpages auf höchstem Niveau',
+  title: 'Signal Software: Software & Landingpages auf höchstem Niveau',
   description:
-    'Signal Software entwickelt individuelle Software und conversion-starke Landingpages mit Nuxt.js — Performance, SEO und Qualität für den deutschen Markt.',
-  ogTitle: 'Signal Software — Software & Landingpages auf höchstem Niveau',
+    'Signal Software entwickelt individuelle Software und conversion-starke Landingpages mit Nuxt.js. Performance, SEO und Qualität für den deutschen Markt.',
+  ogTitle: 'Signal Software: Software & Landingpages auf höchstem Niveau',
   ogDescription:
     'Nuxt.js Spezialist für Softwareentwicklung und Landingpages. Performance-first, SEO-optimiert, made in Germany.',
   ogType: 'website',
   ogLocale: 'de_DE',
   ogSiteName: 'Signal Software',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Signal Software — Software & Landingpages auf höchstem Niveau',
+  twitterTitle: 'Signal Software: Software & Landingpages auf höchstem Niveau',
   twitterDescription:
     'Nuxt.js Spezialist für Softwareentwicklung und Landingpages im deutschen Markt.',
 })
@@ -30,7 +30,7 @@ useHead({
             url: 'https://signal-software.de',
             email: 'hello@signal-software.de',
             description:
-              'Softwareentwicklung und Landingpages auf höchstem Niveau — Nuxt.js Spezialist für den deutschen Markt.',
+              'Softwareentwicklung und Landingpages auf höchstem Niveau. Nuxt.js Spezialist für den deutschen Markt.',
             areaServed: {
               '@type': 'Country',
               name: 'Deutschland',
@@ -60,8 +60,9 @@ useHead({
     <LayoutAppHeader />
     <main>
       <SectionsHeroSection />
-      <SectionsServicesSection />
       <SectionsWhyUsSection />
+      <SectionsFullScreenScrollFx />
+      <SectionsServicesSection />
       <SectionsProcessSection />
       <SectionsTechStackSection />
       <SectionsContactSection />

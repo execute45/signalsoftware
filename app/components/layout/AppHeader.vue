@@ -39,18 +39,17 @@ onUnmounted(() => {
   >
     <div class="container-site flex h-16 items-center justify-between md:h-20">
       <button
-        class="flex items-center gap-2 text-left"
+        class="flex items-center text-left"
         aria-label="Signal Software Startseite"
         @click="handleNavClick('hero')"
       >
-        <span
-          class="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground"
+        <img
+          src="/logo.png"
+          alt="Signal Software"
+          class="h-8 w-auto md:h-9"
+          width="480"
+          height="128"
         >
-          S
-        </span>
-        <span class="text-lg font-semibold text-foreground">
-          Signal <span class="text-muted-foreground">Software</span>
-        </span>
       </button>
 
       <nav class="hidden items-center gap-8 md:flex" aria-label="Hauptnavigation">
