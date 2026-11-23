@@ -73,7 +73,7 @@ function formatDate(value: string | Date) {
             <td class="px-4 py-3 font-medium">{{ lead.name }}</td>
             <td class="hidden px-4 py-3 md:table-cell">{{ lead.email }}</td>
             <td class="hidden px-4 py-3 text-muted-foreground lg:table-cell">
-              {{ lead.projectType || '—' }}
+              {{ lead.projectType || '-' }}
             </td>
             <td class="px-4 py-3 text-muted-foreground">
               {{ formatDate(lead.createdAt) }}

@@ -3,6 +3,10 @@ definePageMeta({
   layout: false,
 })
 
+useSeoMeta({
+  robots: 'noindex, nofollow',
+})
+
 const email = ref('')
 const password = ref('')
 const error = ref('')

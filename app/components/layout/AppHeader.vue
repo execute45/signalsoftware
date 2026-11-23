@@ -1,7 +1,10 @@
 <script setup lang="ts">
+const route = useRoute()
+const router = useRouter()
+
 const navLinks = [
-  { label: 'Leistungen', id: 'leistungen' },
   { label: 'Warum wir', id: 'warum' },
+  { label: 'Leistungen', id: 'leistungen' },
   { label: 'Prozess', id: 'prozess' },
   { label: 'Tech-Stack', id: 'tech' },
   { label: 'Kontakt', id: 'kontakt' },
@@ -11,9 +14,26 @@ const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 const { scrollToSection } = useScrollTo()
 
+const isHome = computed(() => route.path === '/')
+
+const hasImmersiveHero = computed(
+  () => isHome.value || route.meta.darkHero === true,
+)
+
+const showGlassNav = computed(() => isScrolled.value || !hasImmersiveHero.value)
+
 function handleNavClick(id: string) {
   scrollToSection(id)
   isMobileMenuOpen.value = false
+}
+
+function goHome() {
+  isMobileMenuOpen.value = false
+  if (isHome.value) {
+    scrollToSection('hero')
+    return
+  }
+  router.push('/')
 }
 
 function onScroll() {
@@ -25,6 +45,11 @@ onMounted(() => {
   onScroll()
 })
 
+watch(
+  () => route.path,
+  () => nextTick(() => onScroll()),
+)
+
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
 })
@@ -34,14 +59,16 @@ onUnmounted(() => {
   <header
     :class="[
       'fixed inset-x-0 top-0 z-50 transition-all duration-300',
-      isScrolled ? 'glass-nav shadow-lg shadow-black/20' : 'bg-transparent',
+      showGlassNav
+        ? 'glass-nav shadow-lg shadow-black/20'
+        : 'bg-transparent',
     ]"
   >
     <div class="container-site flex h-16 items-center justify-between md:h-20">
       <button
         class="flex items-center text-left"
         aria-label="Signal Software Startseite"
-        @click="handleNavClick('hero')"
+        @click="goHome"
       >
         <img
           src="/logo.png"

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     appManifest: false,
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Signal Software entwickelt individuelle Software und conversion-starke Landingpages mit Nuxt.js. Performance, SEO und Qualität für den deutschen Markt.',
+            'Signal Software entwickelt individuelle Software und conversion-starke Landingpages. Performance, SEO und Qualität für den deutschen Markt.',
         },
         { name: 'theme-color', content: '#000000' },
       ],
@@ -55,16 +55,33 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://signal-software.de',
+    url: 'https://signalsoftware.de',
     name: 'Signal Software',
     description:
-      'Softwareentwicklung und Landingpages auf höchstem Niveau. Nuxt.js Spezialist für den deutschen Markt.',
+      'Softwareentwicklung und Landingpages auf höchstem Niveau für den deutschen Markt.',
     defaultLocale: 'de',
+  },
+
+  sitemap: {
+    exclude: ['/admin/**', '/api/**'],
+    sources: ['/sitemap-posts'],
+  },
+
+  robots: {
+    credits: false,
+    disallow: ['/admin', '/api', '/sitemap-posts'],
   },
 
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: [
+        '/',
+        '/individuelle-softwareentwicklung',
+        '/landingpage-erstellen-lassen',
+        '/webentwicklung',
+        '/impressum',
+        '/datenschutz',
+      ],
     },
     externals: {
       external: ['better-sqlite3'],
@@ -73,7 +90,12 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/admin/**': { ssr: true, prerender: false },
+    '/individuelle-softwareentwicklung': { prerender: true },
+    '/landingpage-erstellen-lassen': { prerender: true },
+    '/webentwicklung': { prerender: true },
+    '/impressum': { prerender: true },
+    '/datenschutz': { prerender: true },
+    '/admin/**': { ssr: true, prerender: false, robots: false },
     '/api/**': { prerender: false },
     '/blog/**': { prerender: false },
   },

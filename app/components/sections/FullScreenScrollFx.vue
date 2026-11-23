@@ -13,8 +13,8 @@ type ScrollSection = {
 const sections: ScrollSection[] = [
   { leftLabel: 'Idee', rightLabel: 'Idee', title: 'Problem' },
   { leftLabel: 'Konzept', rightLabel: 'Konzept', title: 'MVP' },
-  { leftLabel: 'Build', rightLabel: 'Build', title: 'Produkt' },
-  { leftLabel: 'Scale', rightLabel: 'Scale', title: 'Wachstum' },
+  { leftLabel: 'Entwicklung', rightLabel: 'Entwicklung', title: 'Produkt' },
+  { leftLabel: 'Wachstum', rightLabel: 'Wachstum', title: 'Wachstum' },
 ]
 
 const activeIndex = ref(0)
@@ -191,10 +191,10 @@ onUnmounted(() => {
         <p class="text-xs font-medium uppercase tracking-[0.35em] text-white/70 md:text-sm">
           Signal Software
         </p>
-        <h2 class="mt-3 text-2xl font-semibold uppercase leading-none tracking-tight md:text-4xl lg:text-5xl">
-          <span class="block">Der kreative</span>
-          <span class="block">Prozess</span>
-        </h2>
+        <p class="mt-3 text-2xl font-semibold uppercase leading-none tracking-tight md:text-4xl lg:text-5xl" aria-hidden="true">
+          <span class="block">Der durchdachte</span>
+          <span class="block">Weg</span>
+        </p>
       </div>
 
       <div
@@ -244,12 +244,13 @@ onUnmounted(() => {
       </div>
 
       <div class="absolute inset-0 z-10 flex items-center justify-center px-6">
-        <h3
+        <p
           ref="titleEl"
           class="hero-title text-5xl font-bold uppercase tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
+          aria-hidden="true"
         >
           {{ displayTitle }}
-        </h3>
+        </p>
       </div>
 
       <div class="absolute inset-x-0 bottom-10 z-20 flex items-center justify-center gap-4 px-8 md:bottom-14">

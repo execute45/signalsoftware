@@ -160,7 +160,11 @@ async function handleSubmit() {
         >
         <span class="text-sm leading-relaxed text-muted-foreground">
           Ich stimme der Verarbeitung meiner Daten zum Zweck der Kontaktaufnahme zu.
-          Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+          Weitere Informationen finden Sie in unserer
+          <NuxtLink
+            to="/datenschutz"
+            class="text-foreground underline-offset-4 hover:underline"
+          >Datenschutzerklärung</NuxtLink>.
           <span class="text-foreground">*</span>
         </span>
       </label>

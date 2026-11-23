@@ -1,0 +1,35 @@
+# Signal Software
+
+> Signal Software plant und baut digitale Produkte für Unternehmen in Deutschland: von Kampagnenseiten bis zu skalierbaren Webanwendungen im Browser. Schwerpunkte sind individuelle Software, conversion-starke Landingpages und professionelle Webentwicklung; dazu Weiterentwicklung, Schnittstellen und technische Beratung. Technologien werden je nach Projekt gewählt (u. a. Vue/Nuxt, React, Angular, TypeScript, Node, Docker).
+
+## Wichtige Seiten
+
+- [Startseite](https://signalsoftware.de/): Überblick über Leistungen, Qualitätsversprechen, Prozess, Tech-Stack, FAQ und Kontakt.
+- [Individuelle Softwareentwicklung](https://signalsoftware.de/individuelle-softwareentwicklung): Maßgeschneiderte Webanwendungen und Portale, wenn Standardsoftware den Ablauf nicht abbildet.
+- [Landingpage erstellen lassen](https://signalsoftware.de/landingpage-erstellen-lassen): Fokussierte Kampagnenseiten mit klarem Angebot, Vertrauen und Formular.
+- [Webentwicklung](https://signalsoftware.de/webentwicklung): Performante Websites und Web-Apps mit serverseitigem HTML und SEO-Fokus.
+- [Blog](https://signalsoftware.de/blog): Artikel zu Softwareentwicklung und Web.
+- [Impressum](https://signalsoftware.de/impressum): Anbieterkennzeichnung.
+- [Datenschutz](https://signalsoftware.de/datenschutz): Datenschutzerklärung.
+
+## Leistungen (Kurz)
+
+Individuelle Webanwendungen und interne Tools; Landingpages für Kampagnen; Webentwicklung und Weiterentwicklung bestehender Projekte; Integrationen zu CRM, ERP und APIs; Performance, SEO und rechtliche Grundlagen (Impressum, Datenschutz) für den deutschen Markt.
+
+## Prozess
+
+Fünf Schritte: kostenloses Erstgespräch, Konzept mit Roadmap, agile Entwicklung mit Zwischenständen, kontrollierter Launch, optional Betrieb und Updates. Klarheit zu Umfang, Laufzeit und Aufwand vor dem Start.
+
+## Häufige Fragen (Auszug)
+
+Kosten hängen vom Umfang ab; nach Erstgespräch klare Aufwandseinschätzung. Zusammenarbeit in kurzen Iterationen mit dokumentiertem Code. Bestehende Vue-/Web-Projekte können übernommen werden. Landingpages oft in Wochen, komplexere Software über Wochen bis Monate. Start per Kontaktformular oder E-Mail.
+
+## Kontakt
+
+- E-Mail: taha.guner@signalsoftware.de
+- Kontaktformular: https://signalsoftware.de/#kontakt
+- Sprache und Markt: Deutsch, Deutschland
+
+## Für Maschinenleser
+
+Diese Datei fasst die öffentliche Website signalsoftware.de zusammen. Menschenlesbare Ansicht: https://signalsoftware.de/fuer-ki
