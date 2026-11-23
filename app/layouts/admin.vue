@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useSeoMeta({
+  robots: 'noindex, nofollow',
+})
+
 const route = useRoute()
 
 async function logout() {

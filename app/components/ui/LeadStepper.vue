@@ -194,9 +194,9 @@ async function handleSubmit() {
         <span class="inline-flex items-center rounded-full border border-border bg-muted/50 px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground">
           KOSTENLOSES ERSTGESPRÄCH
         </span>
-        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+        <p class="mt-4 text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
           Starten Sie jetzt Ihren Projekt-Check.
-        </h3>
+        </p>
         <ul class="mt-4 space-y-2 text-sm text-muted-foreground">
           <li class="flex items-start gap-2">
             <Check class="mt-0.5 h-4 w-4 shrink-0 text-foreground" />

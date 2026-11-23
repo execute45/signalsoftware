@@ -13,9 +13,10 @@ type BlogPost = {
 
 const { data: posts, pending } = await useFetch<BlogPost[]>('/api/blog/posts')
 
-useSeoMeta({
+usePageSeo({
   title: 'Blog | Signal Software',
-  description: 'Einblicke zu Softwareentwicklung, Landingpages und Nuxt.js von Signal Software.',
+  description: 'Einblicke zu Softwareentwicklung, Landingpages und Webentwicklung von Signal Software.',
+  path: '/blog',
 })
 
 function formatDate(value: string | Date) {

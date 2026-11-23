@@ -23,7 +23,7 @@ defineProps<{
     <p
       v-if="description"
       :class="[
-        'mt-4 max-w-2xl text-lg text-muted-foreground',
+        'mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground',
         align === 'center' ? 'mx-auto' : '',
       ]"
     >

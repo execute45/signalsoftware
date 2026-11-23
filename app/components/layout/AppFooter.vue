@@ -18,14 +18,14 @@ const { scrollToSection } = useScrollTo()
             >
           </div>
           <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Softwareentwicklung und Landingpages auf höchstem Niveau, spezialisiert auf Nuxt.js für den deutschen Markt.
+            Softwareentwicklung und Landingpages auf höchstem Niveau für den deutschen Markt.
           </p>
         </div>
 
         <div>
-          <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
             Navigation
-          </h3>
+          </p>
           <ul class="space-y-2">
             <li>
               <button
@@ -53,6 +53,30 @@ const { scrollToSection } = useScrollTo()
             </li>
             <li>
               <NuxtLink
+                to="/individuelle-softwareentwicklung"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Softwareentwicklung
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/landingpage-erstellen-lassen"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Landingpages
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/webentwicklung"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Webentwicklung
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
                 to="/blog"
                 class="text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -63,14 +87,14 @@ const { scrollToSection } = useScrollTo()
         </div>
 
         <div>
-          <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+          <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
             Kontakt
-          </h3>
+          </p>
           <a
-            href="mailto:hello@signal-software.de"
+            href="mailto:taha.guner@signalsoftware.de"
             class="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            hello@signal-software.de
+            taha.guner@signalsoftware.de
           </a>
         </div>
       </div>
@@ -81,13 +105,25 @@ const { scrollToSection } = useScrollTo()
         <p class="text-sm text-muted-foreground">
           &copy; {{ currentYear }} Signal Software. Alle Rechte vorbehalten.
         </p>
-        <div class="flex gap-6">
-          <span class="cursor-not-allowed text-sm text-muted-foreground/50" title="Demnächst verfügbar">
+        <div class="flex flex-wrap justify-center gap-6 md:justify-end">
+          <NuxtLink
+            to="/fuer-ki"
+            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Für KI
+          </NuxtLink>
+          <NuxtLink
+            to="/impressum"
+            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
             Impressum
-          </span>
-          <span class="cursor-not-allowed text-sm text-muted-foreground/50" title="Demnächst verfügbar">
+          </NuxtLink>
+          <NuxtLink
+            to="/datenschutz"
+            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
             Datenschutz
-          </span>
+          </NuxtLink>
         </div>
       </div>
     </div>

@@ -24,9 +24,44 @@ if (error.value || !post.value) {
   })
 }
 
-useSeoMeta({
+const canonicalPath = `/blog/${post.value.slug}`
+const description = post.value.excerpt || post.value.title
+
+usePageSeo({
   title: `${post.value.title} | Signal Software`,
-  description: post.value.excerpt || post.value.title,
+  description,
+  path: canonicalPath,
+  type: 'article',
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.value.title,
+        description,
+        datePublished: new Date(post.value.createdAt).toISOString(),
+        dateModified: new Date(post.value.createdAt).toISOString(),
+        mainEntityOfPage: `https://signalsoftware.de${canonicalPath}`,
+        author: {
+          '@type': 'Organization',
+          name: 'Signal Software',
+          url: 'https://signalsoftware.de',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Signal Software',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://signalsoftware.de/logo.png',
+          },
+        },
+      }),
+    },
+  ],
 })
 
 function formatDate(value: string | Date) {
